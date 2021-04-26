@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My first JavaScript examples</title>
+    <link rel="stylesheet" href="css/style1.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1>My first JavaScript examples</h1>
+      <p>
+        Connect with friends and the world around you on my JavaScript page :)
+      </p>
+      <div id="box"></div>
+      <h2>How many Apples:</h2>
+      <p id="apples">0</p>
+    </div>
+
+    <script type="text/javascript">
+      /////////////////////////////
+      alert("Hi - how are you??");
+      console.log("Hi, who are you???? Go away!!");
+
+      let myUserInput = prompt("How many apples?");
+      document.getElementById("apples").innerText = myUserInput;
+
+      /////////////////////
+      // confirm example
+      /* comment example */
+      /////////////////////
+
+      /**
+       * My fancy comment
+       */
+
+      const myBox = document.getElementById("box");
+
+      let txt;
+      let r = confirm("Download virus");
+      if (r == true) {
+        txt = "You pressed OK!";
+        myBox.style.backgroundColor = "red";
+      } else {
+        txt = "You pressed Cancel!";
+        myBox.style.backgroundColor = "#00FF00";
+      }
+      console.log(txt);
+      /////////////////
+
+      myBox.innerText = txt;
+
+      myBox.addEventListener("click", function (event) {
+        this.style.backgroundColor = "coral";
+        this.style.transform = "rotate(23deg)";
+      });
+      myBox.addEventListener("mouseover", function (event) {
+        this.style.backgroundColor = "blue";
+        this.style.transform = "rotate(0deg)";
+      });
+      myBox.addEventListener("mouseout", function (event) {
+        this.style.backgroundColor = "coral";
+        this.style.transform = "rotate(-65deg)";
+      });
+    </script>
+  </body>
+</html>

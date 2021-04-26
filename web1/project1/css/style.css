@@ -1,0 +1,12 @@
+.container {
+  display: grid;
+  /* width: 1024px; */
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 300px 300px;
+  grid-gap: 2rem;
+}
+.item {
+  background-color: aqua;
+  border: 2px solid #000000;
+  display: inline-flex;
+}
